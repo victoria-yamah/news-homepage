@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+:root{
+    --orange:hsl(35, 77%, 62%);
+    --red:hsl(5, 85%, 63%) ;
+    --offwhite:hsl(36, 100%, 99%);
+    --grayish_blue:hsl(233, 8%, 79%);
+    --darkgrayish_blue:hsl(236, 13%, 42%);
+    --dark_blue:hsl(240, 100%, 5%) ;
+}
+body{
+    padding: 4rem 6rem;
+}
+p{
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--darkgrayish_blue);
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 3rem;
+}
+
+.hamburger,.mobile-menu{
+    display: none;
+}
+nav ul li{
+    display: inline;
+    margin-left:1rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color:var(--dark_blue)
+}
+.container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:auto;
+    padding-bottom: 5rem;
+}
+.left{
+    width:73%;
+    
+}
+.background-img{
+    background-image: url("./assets/images/image-web-3-desktop.jpg");
+    background-size: cover;
+    width:100%;
+    height: 300px;
+    margin-bottom:1rem;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.title{
+    flex:1;
+}
+.title h1{
+    font-size: 3rem;
+    letter-spacing: 0.1 rem;
+    padding-right: 1.3rem;
+    font-weight: 900;
+    line-height: 3rem;
+}
+.description{
+    flex:1;
+    line-height: 1.5rem;
+    padding-right: 1rem;
+    margin-left:3.8rem;
+}
+
+.description button{
+    padding: 0.5rem 1rem;
+    margin-top:2rem;
+    background-color: var(--red);
+    color: var(--dark_blue);
+    width:50%;
+    height:40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    border: none;
+}
+.description button:hover{
+    cursor: pointer;
+    background-color:var(--dark_blue) ;
+    color:var(--offwhite);
+    border: none;
+    
+}
+.description button:focus {
+    outline: none;
+  }
+.right{
+    background-color: var(--dark_blue);
+    color: var(--offwhite);
+    margin-left:1rem;
+    width:26%;
+    padding: 2rem 1rem;
+   
+}
+.right h1{
+    color: var(--orange);
+    padding-bottom: 1.5rem;
+    font-size:xx-large
+}
+.content{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.topic{
+    height:30%;
+}
+.topic h4{
+    padding-bottom: 1rem;
+    
+}
+.topic p{
+    padding-bottom: 0.5rem;
+    font-size:0.8rem;
+    color:var(--grayish_blue)
+   
+}
+.topic:nth-child(1),.topic:nth-child(2){
+    border-bottom: 0.1px solid var(--grayish_blue);
+    padding-bottom: 1rem;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+}
+.box{
+    display: flex;
+    width:30%
+}
+.box img{
+    width:80px;
+    margin-right: 1.5rem;
+}
+.box-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box-content h2{
+    color: var(--red);
+}
+.box-content h4{
+    font-weight: 800;
+}
+nav ul li a:hover,.box-content h4:hover{
+    color:var(--red);
+    cursor: pointer;
+}
+.topic h4:hover{
+    color: var(--orange);
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    body{
+        padding: 1rem;
+        margin: 0;
+    }
+    header{
+        justify-content: space-between;
+        padding-bottom: 2.5rem;
+    }
+    nav{
+        visibility: hidden;
+    }
+    .hamburger{
+        display: block;
+    }
+    .background-img{
+        background-image: url("./assets/images/image-web-3-mobile.jpg");
+    }
+    .container1{
+        flex-direction: column;
+        width:100%;
+    
+    }
+    header nav{
+        position: fixed;
+        height:100vh;
+        width:70%;
+        background-color: var(--offwhite);
+        top:0;
+        right:0;
+        max-width: 450px;
+        padding: 2rem;
+        
+    }
+    .mobile-menu img{
+       display: flex;
+       justify-self: flex-end;
+    }
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        margin-top: 5rem;
+    }
+    .left,.right{
+        width: 100%;
+    }
+    .left{
+        padding-bottom: 4rem;
+    }
+    .right{
+        margin: 0;
+    }
+    .title{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .description{
+        padding: 0;
+        margin: 0;
+    }
+    .bottom{
+        flex-direction: column;
+    }
+    footer{
+        flex-direction: column;
+        gap:1.5rem;
+        width: 100%;
+    }
+    .box{
+        height: 120px;
+        width:100%
+    }
+    .box img{
+        width:100px;
+    }
+}
