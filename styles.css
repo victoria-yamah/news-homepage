@@ -52,7 +52,7 @@ nav ul li a{
     
 }
 .background-img{
-    background-image: url("./assets/images/image-web-3-desktop.jpg");
+    background-image: url("./images/image-web-3-desktop.jpg");
     background-size: cover;
     width:100%;
     height: 300px;
@@ -186,7 +186,7 @@ nav ul li a:hover,.box-content h4:hover{
         display: block;
     }
     .background-img{
-        background-image: url("./assets/images/image-web-3-mobile.jpg");
+        background-image: url("./images/image-web-3-mobile.jpg");
     }
     .container1{
         flex-direction: column;
@@ -247,3 +247,4 @@ nav ul li a:hover,.box-content h4:hover{
         width:100px;
     }
 }
+
